@@ -1,7 +1,5 @@
 package ca.utoronto.bntester.internal;
 
-import static org.cytoscape.work.ServiceProperties.INSERT_TOOLBAR_SEPARATOR_AFTER;
-import static org.cytoscape.work.ServiceProperties.INSERT_TOOLBAR_SEPARATOR_BEFORE;
 import static org.cytoscape.work.ServiceProperties.IN_MENU_BAR;
 import static org.cytoscape.work.ServiceProperties.IN_TOOL_BAR;
 import static org.cytoscape.work.ServiceProperties.LARGE_ICON_URL;
@@ -27,8 +25,6 @@ public class CyActivator extends AbstractCyActivator {
 		props.setProperty(IN_TOOL_BAR, "true");
 		props.setProperty(TOOL_BAR_GRAVITY, "11.0");
 		props.setProperty(LARGE_ICON_URL, getClass().getResource("/img/bug-32.png").toString());
-		props.setProperty(INSERT_TOOLBAR_SEPARATOR_BEFORE, "true");
-		props.setProperty(INSERT_TOOLBAR_SEPARATOR_AFTER, "true");
 		registerService(bc, taskFactory, TaskFactory.class, props);
 	}
 }
