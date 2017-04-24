@@ -14,13 +14,13 @@ public class TesterTask extends AbstractTask {
 	public BoundedInteger bint1 = new BoundedInteger(0, 0, 3, false, false);
 
 	@Tunable(description = "Bounded Int 2", required = true, format = "###,###", params = "slider=true")
-	public BoundedInteger bint2 = new BoundedInteger(0, 0, 4, false, false);
+	public BoundedInteger bint2 = new BoundedInteger(0, 2, 4, false, false);
 
 	@Tunable(description = "Bounded Int 3", required = true, format = "###,###", params = "slider=true")
-	public BoundedInteger bint3 = new BoundedInteger(0, 0, 5, false, false);
+	public BoundedInteger bint3 = new BoundedInteger(0, 1, 5, false, false);
 
 	@Tunable(description = "Bounded Int 4", required = true, format = "###,###", params = "slider=true")
-	public BoundedInteger bint4 = new BoundedInteger(0, 0, 6, false, false);
+	public BoundedInteger bint4 = new BoundedInteger(0, 6, 6, false, false);
 
 	@Tunable(description = "Bounded Int 5", required = true, format = "###,###", params = "slider=true")
 	public BoundedInteger bint5 = new BoundedInteger(0, 0, 7, false, false);
@@ -41,10 +41,16 @@ public class TesterTask extends AbstractTask {
 	public BoundedFloat bfloat = new BoundedFloat(0.0f, 0.0f, 1000000.0f, false, false);
 	
 	@Tunable(description = "Bounded Float (0.0 - 1.0)", required = true, params = "slider=true")
-	public BoundedFloat bfloat01 = new BoundedFloat(0.0f, 0.0f, 1.0f, false, false);
+	public BoundedFloat bfloat01 = new BoundedFloat(0.0f, 1.0f, 1.0f, false, false);
 	
 	@Tunable(description = "Bounded Double (0.0 - 1.0)", required = true, params = "slider=true")
-	public BoundedDouble bdbl01 = new BoundedDouble(0.0, 0.0, 1.0, false, false);
+	public BoundedDouble bdbl01 = new BoundedDouble(0.0, 0.7, 1.0, false, false);
+	
+	@Tunable(description = "Bounded Double (0.0 - 0.001)", required = true, params = "slider=true")
+	public BoundedDouble bdbl001 = new BoundedDouble(0.0, 0.0004, 0.001, false, false);
+	
+	@Tunable(description = "Bounded Double (0.95 - 1.0)", required = true, params = "slider=true")
+	public BoundedDouble bdbl951 = new BoundedDouble(0.95, 0.975, 1.0, false, false);
 
 	@Override
 	public void run(TaskMonitor tm) {
